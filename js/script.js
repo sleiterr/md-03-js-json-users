@@ -8,7 +8,7 @@ const userstemplete = (post) => {
          <img src="${post.src}" alt="${post.userName}" class="users-img" />
         </div>
         <div class="users-info">
-         <h4 class="name-title">${post.title}</h4>
+         <h4 class="name-title">${post.userName}</h4>
          <p class="item-subtitle">${post.nickname}</p>
          <a href="mailto:${post.email}" class="users-email"
             >${post.email}</a>
@@ -19,4 +19,24 @@ const userstemplete = (post) => {
     `;
 };
 
+// get data fom json
+const fetchPosts = async () => {
+  try {
+    const response = await fetch("../Data.json/usersInfo.json");
+    const posts = await response.json();
+    return posts;
+  } catch {
+    console.error("Error fetching or parsing data:", error);
+  }
+};
 
+const renderPost = async () => {
+  const posts = await fetchPosts();
+
+  posts.forEach((post) => {
+    usersBox.innerHTML += userstemplete(post);
+  });
+  console.log(posts);
+};
+
+renderPost();

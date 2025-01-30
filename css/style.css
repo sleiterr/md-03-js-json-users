@@ -74,17 +74,17 @@ button {
   padding: 90px 0;
   height: 100%;
 }
+
 .users-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.users-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 77px;
   grid-row-gap: 60px;
+  justify-content: center;
+}
+
+.users-list {
 }
 
 .list-item {
