@@ -283,11 +283,11 @@ button {
 
 .btn-grid {
   border: 1px solid #333;
-  border-radius: 20px;
-  padding: 12px 18px;
+  border-radius: 8px;
+  padding: 12px 22px;
 }
 .btn-list {
   border: 1px solid #333;
-  border-radius: 20px;
-  padding: 12px 18px;
+  border-radius: 8px;
+  padding: 12px 22px;
 }
