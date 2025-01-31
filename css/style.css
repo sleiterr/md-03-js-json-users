@@ -71,7 +71,13 @@ button {
 }
 
 .users-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   padding: 90px 0;
+  width: 100%;
   height: 100%;
 }
 
@@ -121,13 +127,13 @@ button {
 
 .users-img {
   align-self: flex-end;
-  
+
   width: 160px;
   height: 160px;
   object-fit: cover;
   object-position: center;
 
-  padding-bottom:  55px;
+  padding-bottom: 55px;
 }
 
 .name-title {
@@ -141,6 +147,7 @@ button {
 
   padding-top: 30px;
 }
+
 .item-subtitle {
   font-weight: 700;
   font-size: 20px;
@@ -150,6 +157,7 @@ button {
   line-height: 25px; /* 125% */
   letter-spacing: 1px;
 }
+
 .users-email {
   font-weight: 400;
   font-size: 20px;
@@ -160,6 +168,7 @@ button {
 
   margin-bottom: 25px;
 }
+
 .users-link {
   font-weight: 700;
   font-size: 12px;
@@ -172,4 +181,113 @@ button {
   padding: 8px 24px;
   border-radius: 30px;
   background: #000;
+}
+
+/**==================*/
+/*! LIST-CONTAINER */
+/**==================*/
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  gap: 60px;
+}
+
+.users-list {
+  width: 80%;
+}
+
+.list-users {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 60px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.16);
+}
+
+/*? img */
+
+.image-box {
+}
+
+.users-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.list-title {
+  font-family: "Bodoni Moda", serif;
+  font-weight: 700;
+  font-size: 30px;
+
+  color: #000;
+  line-height: normal;
+}
+
+.list-email {
+  font-weight: 400;
+  font-size: 20px;
+
+  color: #606060;
+  text-align: center;
+}
+
+.users-link {
+  font-weight: 700;
+  font-size: 12px;
+
+  color: #fff;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+
+  padding: 12px 60px;
+  border-radius: 30px;
+  background: #000;
+}
+
+/**==================*/
+/*! BTNN-CONTAINER */
+/**==================*/
+
+.bttn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.bttn-container > button {
+  font-weight: 400;
+  font-size: 20px;
+
+  color: #606060;
+  letter-spacing: 1.4px;
+}
+
+.btn-grid {
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 12px 18px;
+}
+.btn-list {
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 12px 18px;
 }
