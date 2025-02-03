@@ -45,7 +45,7 @@ const postTemplateList = (post) => {
 // get data fom json
 const fetchPosts = async () => {
   try {
-    const response = await fetch("../Data.json/usersInfo.json");
+    const response = await fetch("../usersInfo.json");
     const posts = await response.json();
     return posts;
   } catch {
