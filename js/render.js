@@ -1,7 +1,9 @@
 import { postTemplateGrid, postTemplateList } from "./template.js";
-import { fetchPosts} from './fetch.js'
+import { fetchPosts } from "./fetch.js";
 
 export const renderPost = async () => {
+  const userContainer = document.querySelector(".users-container");
+
   const usersBox = document.querySelector(".users-box");
   const listContainer = document.querySelector(".list-container");
 
@@ -9,8 +11,10 @@ export const renderPost = async () => {
   const btnList = document.querySelector(".btn-list");
   const posts = await fetchPosts();
 
-  posts.forEach((post) => {
-    usersBox.innerHTML += postTemplateGrid(post);
+  if (userContainer) { 
+
+    posts.forEach((post) => {
+      usersBox.innerHTML += postTemplateGrid(post);
   });
 
   btnGrid.addEventListener("click", () => {
@@ -29,5 +33,18 @@ export const renderPost = async () => {
     });
   });
 
+  }
   //   console.log(posts);
+  const pagePost = document.querySelector(".singel-post");
+
+  if (pagePost) {
+    const search = location.search;
+    console.log(search);
+
+    const postID = new URLSearchParams(search).get("id");
+
+    const foundPost = posts.find((post) => post.id == postID);
+    console.log(foundPost);
+    pagePost.innerHTML = `<p>${foundPost.userName}</p>`;
+  }
 };

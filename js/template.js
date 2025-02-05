@@ -10,7 +10,7 @@ export const postTemplateGrid = (post) => {
          <p class="item-subtitle">${post.nickname}</p>
          <a href="mailto:${post.email}" class="users-email"
             >${post.email}</a>
-         <a href="#" class="users-link">Se website</a>
+         <a href="./post.html?id=${post.id}" class="users-link">Se website</a>
         </div>
         </li>
     </ul>
@@ -29,7 +29,7 @@ export const postTemplateList = (post) => {
          <p class="item-subtitle">${post.nickname}</p>
         </div>
         <a href="mailto:${post.email}" class="list-email">${post.email}</a>
-        <a href="#" class="users-link">Se website</a>
+        <a href="./post.html?id=${post.id}" class="users-link">Se website</a>
       </li>
     </ul>
     `;
