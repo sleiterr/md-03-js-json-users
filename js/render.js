@@ -1,6 +1,7 @@
 import { postTemplateGrid, postTemplateList } from "./template.js";
 import { fetchPosts } from "./fetch.js";
 
+// retur promise
 export const renderPost = async () => {
   const userContainer = document.querySelector(".users-container");
 
@@ -9,6 +10,8 @@ export const renderPost = async () => {
 
   const btnGrid = document.querySelector(".btn-grid");
   const btnList = document.querySelector(".btn-list");
+
+  // Get post
   const posts = await fetchPosts();
 
   if (userContainer) { 
@@ -40,7 +43,7 @@ export const renderPost = async () => {
   if (pagePost) {
     const search = location.search;
     console.log(search);
-
+                                         // retur string
     const postID = new URLSearchParams(search).get("id");
 
     const foundPost = posts.find((post) => post.id == postID);
